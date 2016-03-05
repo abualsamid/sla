@@ -1,0 +1,4 @@
+This is a sample text file that shows how you can use the Language Sample Analysis python code.
+Simply place this text file in a folder called data and run
+python3 main.py
+in the root folder to process all files in the data folder, including this file.
