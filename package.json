@@ -1,0 +1,20 @@
+{
+  "name": "lsa",
+  "version": "1.0.0",
+  "description": "Language Sample Analysis",
+  "main": "index.js",
+  "author": "@born2code",
+  "license": "MIT",
+  "info" : {
+    "invisible" : "http://theinvisiblestrings.com/",
+    "silent_wave": "https://thesilentwaveblog.wordpress.com/",
+    "zuck": "https://www.facebook.com/zuck"
+  },
+  "scripts": {
+    "build": "docker build -t lsa .",
+    "start": "docker run -it --rm --name lsa lsa",
+    "run_asia": "docker run -it --rm --name lsa -v $PWD/data:/usr/src/app/data -w /usr/src/app lsa python main.py > results/asia.txt",
+    "run_invisible": "docker run -it --rm --name lsa -v $PWD/theinvisiblestrings.com:/usr/src/app/data -w /usr/src/app lsa python main.py > results/invisible.txt" ,
+    "run_zuck": "docker run -it --rm --name lsa -v $PWD/zuck:/usr/src/app/data -w /usr/src/app lsa python main.py > results/zuck.txt" 
+  }
+}
